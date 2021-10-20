@@ -1,5 +1,7 @@
-<h2>Editar tipo de comida</h2>
+<h2>Editar el tipo de comida</h2>
 
-<!--<%= form_with() do |formulario|%>
+<%= render 'formulario', base_tipo_comida: @tipo_comida %>
 
-<%end%>-->
+<%= link_to tipos_comidas_path do%>
+    Volver
+<% end %>

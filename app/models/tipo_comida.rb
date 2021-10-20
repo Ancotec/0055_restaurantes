@@ -1,3 +1,3 @@
 class TipoComida < ApplicationRecord
-    has_many:restaurantes
+    has_many :restaurantes
 end
