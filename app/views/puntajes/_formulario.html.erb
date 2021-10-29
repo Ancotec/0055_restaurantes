@@ -1,0 +1,7 @@
+<div class="mb-3">
+<%= form_with(model: base_puntaje) do |formulario| %>
+    <%= formulario.label        :tipo, class:"form-label" %>
+    <%= formulario.text_field   :tipo, class:"form-control mb-3" %>
+    <%= formulario.submit class:"btn btn-secondary" %>
+<% end %>
+</div>

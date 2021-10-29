@@ -1,0 +1,28 @@
+<h1>Sistema de Puntaje para Restaurantes</h1>
+<%= link_to nuevo_puntaje_path, class: "btn btn-primary" do %>Ir al formulario <i class="fas fa-arrow-circle-right"></i>
+<%end%>
+<table class="table">
+    <tr>
+        <th >ID</th>
+        <th class="text-center">Tipo</th>
+        <th class="text-end">Acciones</th>
+    </tr>
+
+    <% @todos_los_puntajes.each do |puntaje| %>
+        <tr>
+            <td style="width:50px"> <%= puntaje.id %> </td>
+            <td class="text-center"> 
+            <%= link_to puntaje_path(puntaje) do %>
+             <%= puntaje.tipo %>
+            <%end%>
+            </td>
+            <td class="text-end">
+                <%= link_to puntaje_path(puntaje), class: "btn btn-danger", method: :delete, data: { confirm: 'Desea eliminar el registro'} do %>
+                <i class="fas fa-trash "></i> Borrar
+            <% end %>
+            <%= link_to editar_puntaje_path(puntaje), class: "btn btn-warning" do %>
+            <i class="far fa-edit"></i> Editar
+            <%end%>
+            </td>
+        </tr>
+    <% end %>
