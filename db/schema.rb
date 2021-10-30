@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_26_013357) do
+ActiveRecord::Schema.define(version: 2021_10_26_011850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2021_10_26_013357) do
     t.index ["usuario_id"], name: "index_promociones_on_usuario_id"
   end
 
-  create_table "puntajes", id: :bigint, default: -> { "nextval('puntuacions_id_seq'::regclass)" }, force: :cascade do |t|
+  create_table "puntajes", force: :cascade do |t|
     t.string "tipo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

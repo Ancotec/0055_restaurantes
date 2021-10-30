@@ -1,33 +1,37 @@
 class PuntajesController < ApplicationController
+
+  #GET /puntajes
     def listar
       #@todos_los_puntajes = Puntaje.all.order(id: :asc)
       @todos_los_puntajes = Puntaje.all
     end
   
-  # CREAR
+  # GET /puntajes/nuevo
     def crear
      @puntaje = Puntaje.new
     end
   
-  #MOSTRAR
+  # GET /puntajes/:id
     def mostrar
       @puntaje = Puntaje.find(params[:id])
     end
   
-  #EDITAR
+  #GET /puntajes/:id/editar
     def editar
       @puntaje = Puntaje.find(params[:id])
     end
   
-  #GUARDAR
+  #POST /puntajes
     def guardar
       datos_puntaje = params.require(:puntaje).permit(:tipo)
       nuevo_puntaje = Puntaje.new(datos_puntaje)
       nuevo_puntaje.save
+
       redirect_to puntajes_path
     end
   
-  #ACTUALIZAR
+  #PUT /puntajes/:id
+  #PATCH /puntajes/:id
     def actualizar
       @puntaje = Puntaje.find(params[:id])
       datos_puntaje = params.require(:puntaje).permit(:tipo)
@@ -36,11 +40,11 @@ class PuntajesController < ApplicationController
       redirect_to puntajes_path
     end
   
-  #DELETE
+  #DELETE /puntajes/:id
   
   def eliminar
-  puntaje = Puntaje.find(params[:id])
-  puntaje.destroy
-  redirect_to puntajes_path
+      puntaje = Puntaje.find(params[:id])
+      puntaje.destroy
+      redirect_to puntajes_path
   end
-  end
+end

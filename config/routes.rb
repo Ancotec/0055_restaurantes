@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   #Rutas Puntajes
   get     'puntajes',                  to: 'puntajes#listar',         as: 'puntajes'
   get     'puntajes/nuevo',            to: 'puntajes#crear',          as: 'nuevo_puntaje'
-  get     'puntajes/:id',               to: 'puntajes#mostrar',        as: 'puntaje'
+  get     'puntajes/:id',              to: 'puntajes#mostrar',        as: 'puntaje'
   get     'puntajes/:id/editar',       to: 'puntajes#editar',         as: 'editar_puntaje'
 
   post    'puntajes',                  to: 'puntajes#guardar'
@@ -41,15 +41,22 @@ Rails.application.routes.draw do
   get     'usuarios/:id',              to: 'usuarios#mostrar',        as: 'usuario'
   get     'usuarios/:id/editar',       to: 'usuarios#editar',         as: 'editar_usuario'
 
-  post    'usuarios',                  to: 'usuarios#guardar',         as: 'usuarios'
+  post    'usuarios',                  to: 'usuarios#guardar',        as: 'usuarios'
   put     'usuarios/:id',              to: 'usuarios#actualizar'
   patch   'usuarios/:id',              to: 'usuarios#actualizar'
   delete  'usuarios/:id',              to: 'usuarios#eliminar'
 
   #Restaurantes
 
-  get 'restaurantes/nuevo',            to: 'restaurantes#crear',      as: 'nuevo_restaurante'
+  get 'restaurantes',                 to: 'restaurantes#listar',      as: 'restaurantes'
+  get 'restaurantes/nuevo',           to: 'restaurantes#crear',       as: 'nuevo_restaurante'
+  get 'restaurantes/:id',             to: 'restaurantes#mostrar',     as: 'restaurante'
+  get 'restaurantes/:id/editar',      to: 'restaurantes#editar',      as: 'editar_restaurante'
 
-  post 'restaurantes',                  to: 'restaurantes#guardar'
+  post    'restaurantes',              to: 'restuarates#guardar',     as: 'restaurantes'
+  put     'restaurantes/:id',          to: 'restaurantes#actualizar'
+  patch   'restaurantes/:id',          to: 'restaurantes#actualizar'
+  delete  'restaurantes/:id',          to: 'restaurantes#eliminar'
+
 end
 
