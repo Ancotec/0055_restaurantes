@@ -14,6 +14,10 @@ class UsuariosController < ApplicationController
         @usuario = Usuario.find(params[:id])
     end
 
+    def listar
+        @usuarios = Usuario.all.order(id: :asc)
+    end
+
     # GET /usuarios/:id/editar
     def editar
         @usuario = Usuario.find(params[:id])
