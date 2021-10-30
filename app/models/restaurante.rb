@@ -1,4 +1,5 @@
 class Restaurante < ApplicationRecord
+<<<<<<< HEAD
   belongs_to (:tipo_comida)
   has_many :platos
 
@@ -13,4 +14,7 @@ class Restaurante < ApplicationRecord
 
   validates(:nombre, presence: true, uniqueness: true)
   validates(:tipo_comida_id, presence: true)
+=======
+  belongs_to(:tipo_comida)
+>>>>>>> d5c6a7a5cc0c6997d0cc85fe03ebe85596bdce6c
 end

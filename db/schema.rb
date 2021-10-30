@@ -10,11 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_10_26_011850) do
+=======
+ActiveRecord::Schema.define(version: 2021_10_20_221454) do
+>>>>>>> d5c6a7a5cc0c6997d0cc85fe03ebe85596bdce6c
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "invitaciones", force: :cascade do |t|
     t.string "mensaje"
     t.date "fecha"
@@ -47,12 +52,15 @@ ActiveRecord::Schema.define(version: 2021_10_26_011850) do
     t.index ["usuario_id"], name: "index_promociones_on_usuario_id"
   end
 
+=======
+>>>>>>> d5c6a7a5cc0c6997d0cc85fe03ebe85596bdce6c
   create_table "puntajes", force: :cascade do |t|
     t.string "tipo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+<<<<<<< HEAD
   create_table "puntajes_platos", force: :cascade do |t|
     t.bigint "plato_id", null: false
     t.bigint "puntaje_id", null: false
@@ -75,6 +83,8 @@ ActiveRecord::Schema.define(version: 2021_10_26_011850) do
     t.index ["usuario_id"], name: "index_puntajes_restaurantes_on_usuario_id"
   end
 
+=======
+>>>>>>> d5c6a7a5cc0c6997d0cc85fe03ebe85596bdce6c
   create_table "restaurantes", force: :cascade do |t|
     t.string "nombre"
     t.bigint "tipo_comida_id", null: false
