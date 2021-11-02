@@ -3,7 +3,8 @@ class Plato < ApplicationRecord
 
     has_many :puntajes_platos
     has_many :puntajes, through: :puntajes_platos
+
     validates(:nombre, presence: true)
-    validates(:precio, presence: true)
     validates(:descripcion, presence: true)
+    validates(:restaurante_id, presence: true)
 end

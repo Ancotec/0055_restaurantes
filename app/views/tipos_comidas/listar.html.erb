@@ -1,18 +1,8 @@
 <h1>
-<<<<<<< HEAD
-    <i class="fas fa-fish">Listar los tipos de restaurantes</i>
-    
-</h1>
-
-<%= link_to @titulo_link, nuevo_tipo_comida_path, class: 'btn btn-primary' %>
- <%= link_to 'volver', tipos_comidas_path, class: 'btn btn-primary' %>
-=======
-    <i class="fas fa-fish"></i>
     Listar los tipos de restaurantes
 </h1>
 
 <%= link_to @titulo_link, nuevo_tipo_comida_path, class: 'btn btn-primary' %>
->>>>>>> d5c6a7a5cc0c6997d0cc85fe03ebe85596bdce6c
 
 <table class="table">
     <tr>
@@ -25,7 +15,6 @@
             <td> <%= tipo_comida.id %> </td>
             <td class="text-center"> 
                 <%= link_to tipo_comida_path(tipo_comida) do %>
-                    <i class="fas fa-fish"></i>
                     <%= tipo_comida.tipo %>
                 <% end %>
             </td>

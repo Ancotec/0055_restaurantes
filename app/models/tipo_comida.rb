@@ -1,5 +1,6 @@
+# Los modelos van en singular por ser clases
 class TipoComida < ApplicationRecord
-<<<<<<< HEAD
+
     before_validation :convertir_a_minusculas
     after_save :enviar_correo
     after_destroy :imprmir_el_eliminado
@@ -26,7 +27,3 @@ class TipoComida < ApplicationRecord
         
     end
 end
-=======
-    has_many :restaurantes
-end
->>>>>>> d5c6a7a5cc0c6997d0cc85fe03ebe85596bdce6c

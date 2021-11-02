@@ -1,41 +1,16 @@
-<h1 class="fas fa-fish">Lista de usuarios</h1>
+<h1>Lista de usuarios</h1>
 
-<!--<%= link_to "Registrar nuevo usuario", nuevo_usuario_path, class:"btn btn-primary" %>-->
-<%= link_to  "Volver", nuevo_usuario_path, class:"btn btn-primary" %>
+<%= link_to "Registrar nuevo usuario", nuevo_usuario_path %>
 
 <table class="table">
     <tr>
         <th>Nombre</th>
     </tr>
-<!--<%= @usuarios.each  do |usuario|%>
-        <tr>
-            <td>
-            <%= link_to usuario.nombre_usuario, usuario_path(usuario) %>
-            </td>
-        </tr>
-    <%end%>-->
-
     <% @usuarios.each do |usuario| %>
         <tr>
-            <td> <%= usuario.id %> </td>
-            <td class="text-center"> 
-                <%= link_to  usuario_path(usuario) do %>
-                    <i class="fas fa-fish"></i>
-                    <%= usuario.nombre_usuario %>
-                <% end %>
-            </td>
-            <td class="text-end">
-                <%= link_to usuario_path(usuario), class: 'btn btn-danger', method: :delete, data: { confirm: '¿Está seguro que quiere eliminar el registro?' } do %>
-                    <i class="fas fa-eraser"></i>
-                    Borrar
-                <% end %>
-                <%= link_to editar_usuario_path(usuario), class: 'btn btn-warning' do %>
-                    <i class="fas fa-edit"></i>
-                    Editar
-                <% end %>
+            <td>
+                <%= link_to usuario.nombre_usuario, usuario_path(usuario) %>
             </td>
         </tr>
     <% end %>
-
-
 </table>

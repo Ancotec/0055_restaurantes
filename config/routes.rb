@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
   
-<<<<<<< HEAD
-  get 'platos/listar'
-  get 'platos/crear'
-  get 'platos/mostrar'
-  get 'platos/editar'
+  root "votaciones#listar"
+  post "votaciones/:id_restaurante/puntaje/:id_puntaje", to: "votaciones#votar", as: 'votar_restaurante'
 
-=======
->>>>>>> d5c6a7a5cc0c6997d0cc85fe03ebe85596bdce6c
+
   # Rutas Tipos Comidas
   get      'tipos_comidas',             to: 'tipos_comidas#listar',     as: 'tipos_comidas'     # listar 
   get      'tipos_comidas/nuevo',       to: 'tipos_comidas#crear',      as: 'nuevo_tipo_comida' # formulario de nuevo
@@ -24,7 +20,6 @@ Rails.application.routes.draw do
   get       'puntajes/nuevo',           to: 'puntajes#crear',           as: 'nuevo_puntaje'
   get       'puntajes/:id',             to: 'puntajes#mostrar',         as: 'puntaje'
   get       'puntajes/:id/editar',      to: 'puntajes#editar',          as: 'editar_puntaje'
-<<<<<<< HEAD
 
   post      'puntajes',                 to: 'puntajes#guardar'
   put       'puntajes/:id',             to: 'puntajes#actualizar'
@@ -64,12 +59,4 @@ Rails.application.routes.draw do
   patch   'platos',            to: 'platos#actualizar'
   put     'platos',            to: 'platos#actualizar'
   delete  'platos',            to: 'platos#eliminar'
-=======
-
-  post      'puntajes',                 to: 'puntajes#guardar'
-  put       'puntajes/:id',             to: 'puntajes#actualizar'
-  patch     'puntajes/:id',             to: 'puntajes#actualizar'
-  delete    'puntajes/:id',             to: 'puntajes#eliminar'
->>>>>>> d5c6a7a5cc0c6997d0cc85fe03ebe85596bdce6c
 end
-

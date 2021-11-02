@@ -1,7 +1,8 @@
 <h1 class="">Registrar nuevo restaurante</h1>
 
+<%= render "formulario", base_restaurante: @restaurante, base_tipos_comidas: @tipos_comidas %>
 
-<%= form_with(model: @restaurante) do |formulario| %>
+<!--<%= form_with(model: @restaurante) do |formulario| %>
 
     <div class="mb-3">
         <%= formulario.label :nombre, class: 'form-label' %>
@@ -26,4 +27,4 @@
     </div>
 
     <%= formulario.submit%>
-<%end%>
+<%end%>-->
