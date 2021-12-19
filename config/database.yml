@@ -19,9 +19,9 @@ default: &default
   encoding: unicode
 
   host: 127.0.0.1
-  port: 5433          # 5432
+  port: 5432         # 5432
   username: postgres
-  password: postgres  # es su propio password
+  password: ancotec  # es su propio password
 
 
   # For details on connection pooling, see Rails configuration guide
@@ -30,7 +30,7 @@ default: &default
 
 development:
   <<: *default
-  database: restaurantes_development
+  database: restaurantes
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

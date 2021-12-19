@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_26_011850) do
+ActiveRecord::Schema.define(version: 2021_10_26_013357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,7 +83,7 @@ ActiveRecord::Schema.define(version: 2021_10_26_011850) do
     t.index ["tipo_comida_id"], name: "index_restaurantes_on_tipo_comida_id"
   end
 
-  create_table "tipos_comidas", id: :bigint, default: -> { "nextval('tipo_comidas_id_seq'::regclass)" }, force: :cascade do |t|
+  create_table "tipos_comidas", force: :cascade do |t|
     t.string "tipo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
